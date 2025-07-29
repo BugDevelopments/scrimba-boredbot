@@ -1,5 +1,9 @@
-
 body {
+    margin: 0;
+}
+
+
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,14 +26,14 @@ h1 {
     letter-spacing: 0.02em;
 }
  
-h4 {
+p {
     font-size: 1.75rem;
     text-shadow: 2px 2px 50px white;
     color: #0A0A0A;
     letter-spacing: 0.05em;
 }
 
-.h4-activated {
+.p-activated {
     color: gold;
     text-shadow: 5px 5px 2px firebrick;
 }
