@@ -12,6 +12,10 @@ back from the Bored API
         excitement to the page
 */
 
+
+import { gifUrls } from "./data.js"
+
+console.log(gifUrls)
 document.getElementById("get-activity").addEventListener("click", function() {
   fetch("https://apis.scrimba.com/bored/api/activity")
     .then(response => response.json())
@@ -21,7 +25,13 @@ document.getElementById("get-activity").addEventListener("click", function() {
     })
 })
 
+
 function changeStyle() {
   document.querySelector("h4").classList.add("h4-activated")
-  document.getElementById("motivational-gif").style.display = "block"
+  const imgEl = document.getElementById("motivational-gif")
+  const num = Math.floor(Math.random()*gifUrls.length)
+  imgEl.src = gifUrls[num]
+  console.log(num)
+  console.log(imgEl.src)
+  imgEl.style.display = "block"
 }
